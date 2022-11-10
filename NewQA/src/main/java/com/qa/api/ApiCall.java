@@ -28,7 +28,8 @@ public class ApiCall {
 	}
 	
 	public ApiResponse postApiCall(ApiRequest request) {
-		return null;
+		ApiResponse apiResponse=new ApiResponse();
+		return apiResponse;
 	}
 	
 	public ApiResponse putApiCall(ApiRequest request) {
