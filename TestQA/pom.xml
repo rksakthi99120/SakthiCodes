@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.test.qa</groupId>
+  <artifactId>TestQA</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  <dependency>
+    <groupId>com.new.qa</groupId>
+    <artifactId>NewQA</artifactId>
+    <version>0.0.1-20221111.050626-3</version>
+</dependency>
+  </dependencies>
+  <profiles>
+    <profile>
+      <repositories>
+    <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>newqa-libs-snapshot</name>
+          <url>https://newqa.jfrog.io/artifactory/newqa-libs-snapshot</url>
+        </repository>
+        </repositories>
+          </profile>
+  </profiles>
+</project>

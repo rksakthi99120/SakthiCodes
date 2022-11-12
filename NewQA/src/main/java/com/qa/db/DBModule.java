@@ -38,7 +38,7 @@ public class DBModule {
 		String driver = null;
 		switch (dbName) {
 		case "MySQL":
-			driver = "com.mysql.jdbc.Driver";
+			driver = "com.mysql.cj.jdbc.Driver";
 			break;
 		case "SqlServer":
 			driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
