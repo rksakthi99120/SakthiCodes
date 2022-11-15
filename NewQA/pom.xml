@@ -21,7 +21,7 @@
 			<artifactId>testng</artifactId>
 			<version>6.11</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.sourceforge.jtds</groupId>
 			<artifactId>jtds</artifactId>
@@ -36,6 +36,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.31</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.55</version>
 		</dependency>
 	</dependencies>
 	<properties>
