@@ -22,7 +22,7 @@ public class RemoteServer {
 	ChannelSftp sftpChannel = null;
 	Channel channel = null;
 
-	public Session connectServer(HostInfo hostInfo) {
+	public Session connectRemoteServer(HostInfo hostInfo) {
 		JSch jsch = new JSch();
 		try {
 			session = jsch.getSession(hostInfo.getUsername(), hostInfo.getHostUrl(), 22);
@@ -34,7 +34,21 @@ public class RemoteServer {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return session;
+	}
+	public Session connectRemoteServer(String host, String username, String password) {
+		JSch jsch = new JSch();
+		try {
+			session = jsch.getSession(username, host, 22);
+			session.setConfig("StrictHostKeyChecking", "no");
+			session.setPassword(password);
+			session.connect();
+			System.out.println("Server connected : " + session.isConnected());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return session;
 	}
 
 	public boolean isFolderExist(Session session, String inputFolder) throws JSchException, SftpException {

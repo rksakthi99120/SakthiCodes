@@ -9,7 +9,7 @@
 		<dependency>
 			<groupId>com.new.qa</groupId>
 			<artifactId>NewQA</artifactId>
-			<version>0.0.1-20221111.050626-3</version>
+			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 	<profiles>
