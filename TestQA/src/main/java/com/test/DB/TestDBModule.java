@@ -16,6 +16,7 @@ public class TestDBModule {
 		hostInfo.setUsername("root");
 		hostInfo.setPassword("Yamuna!123");
 		System.out.println(dbModule.runQuery("select top 5 * from servers", hostInfo));
+
 	}
 
 }

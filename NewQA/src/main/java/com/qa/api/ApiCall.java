@@ -8,7 +8,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class ApiCall {
 	
-	public ApiResponse getApiCall(ApiRequest request) {
+	public ApiResponse getApi(ApiRequest request) {
 		RestAssured.baseURI=request.getEndPointUrl();
 		RequestSpecification reqSpec=RestAssured.given().header("Authorization", request.getAuthorization(), null);
 		Response response=reqSpec.request(Method.GET);
