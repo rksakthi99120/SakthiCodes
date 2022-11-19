@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6232" started-at="2022-11-15T14:51:40Z" finished-at="2022-11-15T14:51:46Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6232" started-at="2022-11-15T14:51:40Z" finished-at="2022-11-15T14:51:46Z">
+      <class name="com.test.remote.TestRemoteServer">
+        <test-method status="PASS" signature="testRemoteConnection()[pri:0, instance:com.test.remote.TestRemoteServer@11a9e7c8]" name="testRemoteConnection" duration-ms="6218" started-at="2022-11-15T20:21:40Z" finished-at="2022-11-15T20:21:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoteConnection -->
+      </class> <!-- com.test.remote.TestRemoteServer -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

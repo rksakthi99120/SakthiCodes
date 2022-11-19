@@ -19,7 +19,7 @@ public class TestRemoteServer {
 		hostInfo.setUsername("skaliyaperumal");
 		hostInfo.setPassword("Yamuna$456");
 		RemoteServer remoteServer=new RemoteServer();
-		Session session=remoteServer.connectServer(hostInfo);
+		Session session=remoteServer.connectRemoteServer(hostInfo);
 		System.out.println(remoteServer.getFiles(session, "../../mnt/data/ingest20/outfiles/dm_Common_Sch/11/14/"));
 		session.disconnect();
 	}

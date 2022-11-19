@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.report.Listener"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="env" value="QA2"/>
+    <groups>
+      <run>
+        <include name="Report"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.test.report.TestReport">
+        <methods>
+          <include name="testFail"/>
+          <include name="testFailString"/>
+          <include name="testFailNumber"/>
+        </methods>
+      </class> <!-- com.test.report.TestReport -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

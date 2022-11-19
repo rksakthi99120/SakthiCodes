@@ -15,7 +15,8 @@ public class TestDBModule {
 		hostInfo.setHostUrl("jdbc:mysql://localhost:3306/hackathon");
 		hostInfo.setUsername("root");
 		hostInfo.setPassword("Yamuna!123");
-		System.out.println(dbModule.runQuery("select * from servers", hostInfo));
+		System.out.println(dbModule.runQuery("select top 5 * from servers", hostInfo));
 	}
 
 }
+
