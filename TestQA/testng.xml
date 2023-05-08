@@ -6,16 +6,15 @@
    <listener class-name="com.qa.report.Listener" />
  </listeners>  
  <test name="Test">
- <parameter name="env" value="QA2"/>
+ <parameter name="env" value="QA1"/>
  <groups>
     <run>
-     <include name="Report"/> 
-     <!--    <include name="PartNumberParsing"/> -->
+     <include name="TestAPI"/> 
          <!--    <include name="IngestErrorCodes"/> -->
     </run>
   </groups>
 <packages>
-    <package name="com.test.report"/>
+      <package name="com.test.api"/>
  </packages>
  
 </test> <!-- Test -->
