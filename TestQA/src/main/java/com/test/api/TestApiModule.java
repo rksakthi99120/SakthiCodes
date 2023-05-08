@@ -15,7 +15,7 @@ import io.restassured.specification.RequestSpecification;
 public class TestApiModule {
 	ApiResponse apiResponse=new ApiResponse();
 	
-	@Test(groups={"TestAPI"})
+	@Test(groups={"TestAPI","All"})
 	public void testGetAPI() {
 		ApiCall apiCall=new ApiCall();
 		ApiRequest apiRequest=new ApiRequest();
@@ -25,14 +25,14 @@ public class TestApiModule {
 				"Test to verify the Get University API");
 	}
 	
-	@Test(groups={"TestAPI"},dependsOnMethods = {"testGetAPI"})
+	@Test(groups={"TestAPI","All"},dependsOnMethods = {"testGetAPI"})
 	public void testGetAPIData() {
 		Assertion.assertEquals(true,apiResponse.getResponse().contains("Amrita Vishwa Vidyapeetham (Deemed University)")
 				,"Get University Api is not retrieving data properly",
 				"Test to verify the Get University API data validation");
 	}
 	
-	@Test(groups={"TestAPI"},dependsOnMethods = {"testGetAPI"})
+	@Test(groups={"TestAPI","All"},dependsOnMethods = {"testGetAPI"})
 	public void testGetAPIDataFail() {
 		Assertion.assertEquals(true,apiResponse.getResponse().contains("Test University"),
 				"Get University Api is not retrieving data properly",
