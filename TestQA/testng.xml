@@ -15,6 +15,7 @@
   </groups>
 <packages>
     <package name="com.test.report"/>
+        <package name="com.test.api"/>
  </packages>
  
 </test> <!-- Test -->
