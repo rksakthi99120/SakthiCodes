@@ -13,6 +13,9 @@ WebDriver driver;
 	@FindBy(how=How.XPATH,using = "//*[@id=\"app\"]//label[contains(text(),'Impressive')]")
 	WebElement impressiveRadioButton;
 	
+	@FindBy(how=How.XPATH,using="//*[@id=\"item-4\"]//span[contains(text(),'Buttons')]")
+	WebElement pageButtons;
+	
 	@FindBy(how=How.XPATH,using = "//*[@id=\"app\"]//p")
 	WebElement labelOutput;
 	
@@ -25,6 +28,9 @@ WebDriver driver;
 	}
 	public void clickImpressiveRadioButton() {
 		impressiveRadioButton.click();
+	}
+	public void clickButtonsPage() {
+		pageButtons.click();
 	}
 	
 	public String getOutputText() {

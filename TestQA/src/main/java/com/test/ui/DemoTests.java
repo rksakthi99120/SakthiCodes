@@ -18,6 +18,7 @@ public class DemoTests {
 	WebDriver driver = new ChromeDriver();
 	TextBoxPage textBoxPage;
 	RadioButtonPage radioButtonPage;
+	ButtonsPage buttonsPage;
 	
 	@BeforeTest(groups = "UI")
 	public void setup() {
@@ -60,7 +61,7 @@ public class DemoTests {
 		//Click Yes radio button
 		radioButtonPage.clickYesRadioButton();
 
-		Assertion.assertEquals("You have selected Yes", radioButtonPage.getOutputText(), "Yes button is not selected",
+		Assertion.assertEquals("You have selected Yes", radioButtonPage.getOutputText(), "Yes radio button is not selected",
 				"Test to verify Radio Button page Yes button");
 	}
 	
@@ -68,8 +69,20 @@ public class DemoTests {
 	public void testVerifyRadioButtonPageImpressive() throws InterruptedException {
 		//Click Impressive radio button
 		radioButtonPage.clickImpressiveRadioButton();
-		Assertion.assertEquals("You have selected Impressive", radioButtonPage.getOutputText(), "Impressive button is not selected",
+		Assertion.assertEquals("You have selected Impressive", radioButtonPage.getOutputText(), 
+				"Impressive radio button is not selected",
 				"Test to verify Radio Button page Impressive button");
+	}
+	
+	@Test(priority=4,groups = "UI")
+	public void testVerifyButtonPageClickMe() throws InterruptedException {
+		radioButtonPage.clickButtonsPage();
+		buttonsPage=PageFactory.initElements(driver, ButtonsPage.class);
+		//Click Yes radio button
+		buttonsPage.clickClickMeButton();
+
+		Assertion.assertEquals("You have done a dynamic click", buttonsPage.getOutputText(), "Click me button is not selected",
+				"Test to verify Button page Click me button");
 	}
 
 	@AfterTest(groups = "UI")
