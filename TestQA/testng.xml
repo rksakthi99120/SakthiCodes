@@ -9,14 +9,16 @@
  <parameter name="env" value="QA1"/>
  <groups>
     <run>
-     <include name="TestAPI"/> 
+     <include name="UI"/> 
          <!--    <include name="IngestErrorCodes"/> -->
     </run>
   </groups>
 <packages>
     <package name="com.test.report"/>
-        <package name="com.test.api"/>
- </packages>
+    <package name="com.test.api"/>
+    <package name="com.test.ui"/>
+</packages>
  
 </test> <!-- Test -->
 </suite> <!-- Suite -->
+
