@@ -4,9 +4,11 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.report.Assertion;
@@ -15,14 +17,21 @@ import dev.failsafe.internal.util.Assert;
 
 public class DemoTests {
 
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver=null;
 	TextBoxPage textBoxPage;
 	RadioButtonPage radioButtonPage;
 	ButtonsPage buttonsPage;
 	
 	@BeforeTest(groups = "UI")
-	public void setup() {
-
+	@Parameters({ "browser" })
+	public void setup(String browser) {
+		//String browser = System.getProperty("browser");
+		if(browser.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
